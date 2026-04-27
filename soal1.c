@@ -51,7 +51,7 @@ int hitungmedian (int arr[], int n){
   	// If odd, median is the middle element
   	else {
         median2 = (int)arr[(n / 2)];
-        printf(" MEDIAN %d", median2);
+        printf("MEDIAN %d", median2);
 
     }
 }
@@ -83,12 +83,10 @@ int main(){
     ukuran -= 1;
     bubbleSort(arr, ukuran);
     printf("COUNT %d", ukuran);
-    printf("SORTED ");
+    printf(" SORTED ");
     for(int l=0; l<ukuran; l++){
-        printf("%d", arr[l]);
-    }
-    printf(" ");
-    
+        printf("%d ", arr[l]);
+    }    
    
 
     float median= hitungmedian(arr, ukuran);
