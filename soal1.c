@@ -84,7 +84,8 @@ int main(){
     bubbleSort(arr, ukuran);
     printf("COUNT %d", ukuran);
     printf(" SORTED ");
-    for(int l=1; l<ukuran; l++){
+
+    for(int l=0; l<ukuran; l++){
         printf("%d ", arr[l]);
     }    
    
