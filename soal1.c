@@ -22,12 +22,13 @@ void swap(int* xp, int* yp){ //geeksforgeeks
 void bubbleSort(int arr[], int ukuran){ //geeksforgeeks
     int i, j;
     bool swapped;
-    for (i = 0; i < ukuran - 1; i++) {
+    for (i = 0; i < ukuran; i++) {
         swapped = false;
-        for (j = 0; j < ukuran - i - 1; j++) {
+        for (j = 0; j < ukuran - i; j++) {
             if (arr[j] > arr[j + 1]) {
                 swap(&arr[j], &arr[j + 1]);
                 swapped = true;
+                //printf("SWAP %d %d\n", arr[j], arr[j+1]);
             }
         }
 
@@ -38,15 +39,20 @@ void bubbleSort(int arr[], int ukuran){ //geeksforgeeks
     }
 }
 int hitungmedian (int arr[], int n){
-    bubbleSort(arr, n);
-    int median;
-    if (n+1 % 2 == 0) {
-        return (arr[n / 2] + arr[(n+1 / 2) +1]) / 2.0;
+    //bubbleSort(arr, n);
+    float median1;
+    int median2;
+    
+    if ((n) % 2 == 0) {
+        median1 = (float)(arr[0] + (arr[n-1])) / 2.0;
+        printf(" MEDIAN %.2f", median1);
     }
   
   	// If odd, median is the middle element
   	else {
-        return arr[(n / 2)+1];
+        median2 = (int)arr[(n / 2)];
+        printf(" MEDIAN %d", median2);
+
     }
 }
 /*int count (int arr[]){
@@ -69,17 +75,22 @@ int main(){
         arr[i]=input;
         i++;
         ukuran++;
-        scanf("%d", &input);
-    }
-    bubbleSort(arr, ukuran-1);
-    
-    float median= hitungmedian(arr, ukuran-1);
-    printf("COUNT %d", ukuran-1);
-    printf(" SORTED ");
-    for(int k=1; k<ukuran; k++){
-        printf("%d ", arr[k]);
-    }
-    printf(" MEDIAN %.2f\n", median);
 
+
+        scanf("%d", &input);
+        //printf("INPUT %d\n",input);
+    }
+    ukuran -= 1;
+    bubbleSort(arr, ukuran);
+    printf("COUNT %d", ukuran);
+    printf("SORTED ");
+    for(int l=0; l<ukuran; l++){
+        printf("%d", arr[l]);
+    }
+    printf(" ");
+    
+   
+
+    float median= hitungmedian(arr, ukuran);
 
 }
