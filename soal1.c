@@ -1,7 +1,7 @@
 /** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2025/2026
  *   Modul               : 3
  *   Hari dan Tanggal    : 27 April 2026
- *   Nama (NIM)          : Michelle (13224098)
+ *   Nama (NIM)          : Michelle (13224098) /
  *   Nama File           : soal1.c
  *   Deskripsi           : Menyimpan data valid (sebelum input -1) dalam array dinamis, diurutkan, dan kemudian dicari mediannya
  * 
